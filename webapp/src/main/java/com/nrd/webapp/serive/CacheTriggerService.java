@@ -1,8 +1,11 @@
 package com.nrd.webapp.serive;
 
+import com.nrd.webapp.model.CacheTriggerMessage;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
+@Transactional
 public class CacheTriggerService {
 
     private final JmsProducerService jmsProducerService;
@@ -11,8 +14,7 @@ public class CacheTriggerService {
         this.jmsProducerService = jmsProducerService;
     }
 
-    public String updateCache() {
-        jmsProducerService.send();
-        return "Ok";
+    public CacheTriggerMessage updateCache() {
+        return jmsProducerService.send();
     }
 }

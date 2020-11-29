@@ -1,5 +1,6 @@
 package com.nrd.webapp.controller;
 
+import com.nrd.webapp.model.CacheTriggerMessage;
 import com.nrd.webapp.serive.CacheTriggerService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,7 +25,7 @@ public class CacheTriggerController {
     }
 
     @PostMapping(value = "/cache-trigger")
-    public ResponseEntity<String> triggerCache(){
+    public ResponseEntity<CacheTriggerMessage> triggerCache(){
         log.info("request for updating cache");
         return ResponseEntity.ok(cacheTriggerService.updateCache());
     }

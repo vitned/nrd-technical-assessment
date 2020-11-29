@@ -10,10 +10,12 @@ import org.springframework.stereotype.Component;
 public class WebAppRouteBuilder extends RouteBuilder {
     @Override
     public void configure() {
-        from("direct:updateCache").routeId("generate-route")
+        from("direct:updateCache").routeId("producer-route")
                 .marshal().json(JsonLibrary.Gson, CacheTriggerMessage.class).id("marshal json to PersonMessage")
                 .log("Sent message - ${body} - to person-queue")
                 .to(ExchangePattern.InOut,"jms:person-queue").id("direct to jms")
-                .log("Receive ${body}");
+                .log("Receive ${body}")
+                .unmarshal().json(JsonLibrary.Gson, CacheTriggerMessage.class).id("unmarshal json to PersonMessage")
+                .end();
     }
 }

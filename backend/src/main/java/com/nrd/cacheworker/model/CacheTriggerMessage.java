@@ -1,6 +1,6 @@
-package com.nrd.webapp.model;
+package com.nrd.cacheworker.model;
 
-import com.nrd.webapp.model.enums.UpdateStatus;
+import com.nrd.cacheworker.model.enums.UpdateStatus;
 
 import java.io.Serializable;
 
