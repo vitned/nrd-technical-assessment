@@ -4,11 +4,14 @@ import com.nrd.cacheworker.model.Person;
 import com.nrd.cacheworker.repository.PersonRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.cache.annotation.CacheConfig;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@CacheConfig(cacheNames={"people"})
 public class PersonService {
 
     private static final Logger log = LoggerFactory.getLogger(PersonService.class);
@@ -19,6 +22,7 @@ public class PersonService {
         this.personRepository = personRepository;
     }
 
+    @Cacheable
     public List<Person> getAllPeople() {
         log.info("Get all people");
         simulateSlowService();
