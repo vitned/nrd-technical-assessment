@@ -1,6 +1,6 @@
-package com.nrd.rest.controller;
+package com.nrd.webapp.controller;
 
-import com.nrd.rest.serive.CacheTriggerService;
+import com.nrd.webapp.serive.CacheTriggerService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,4 +1,4 @@
-package com.nrd.rest.model;
+package com.nrd.webapp.model;
 
 public class CacheTriggerMessage {
 

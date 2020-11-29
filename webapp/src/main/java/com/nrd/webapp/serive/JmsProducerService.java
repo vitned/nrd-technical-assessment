@@ -1,6 +1,6 @@
-package com.nrd.rest.serive;
+package com.nrd.webapp.serive;
 
-import com.nrd.rest.model.CacheTriggerMessage;
+import com.nrd.webapp.model.CacheTriggerMessage;
 import org.apache.camel.ProducerTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

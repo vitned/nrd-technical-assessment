@@ -1,4 +1,4 @@
-package com.nrd.rest;
+package com.nrd.webapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

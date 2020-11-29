@@ -1,6 +1,6 @@
-package com.nrd.rest.routconfig;
+package com.nrd.webapp.routconfig;
 
-import com.nrd.rest.model.CacheTriggerMessage;
+import com.nrd.webapp.model.CacheTriggerMessage;
 import org.apache.camel.ExchangePattern;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.model.dataformat.JsonLibrary;

@@ -1,4 +1,4 @@
-package com.nrd.rest.serive;
+package com.nrd.webapp.serive;
 
 import org.springframework.stereotype.Service;
 
