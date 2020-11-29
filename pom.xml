@@ -19,6 +19,7 @@
 
     <modules>
         <module>webapp</module>
+        <module>backend</module>
     </modules>
 
     <properties>
@@ -35,9 +36,4 @@
         <camel>3.5.0</camel>
     </properties>
 
-
-
-    <dependencies>
-
-    </dependencies>
 </project>
